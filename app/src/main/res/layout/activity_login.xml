@@ -19,7 +19,7 @@
         android:layout_marginTop="48dp">
 
         <android.support.design.widget.TextInputEditText
-            android:id="@+id/et_pin_code"
+            android:id="@+id/pinCodeEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
@@ -30,6 +30,7 @@
 
     <Button
         style="@style/Button"
+        android:id="@+id/enterButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/activity_spacing_margin"

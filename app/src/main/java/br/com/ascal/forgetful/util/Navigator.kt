@@ -12,7 +12,7 @@ class Navigator {
             context.startActivity(Intent(context, LoginActivity::class.java))
         }
 
-        fun goToDash(context: Context) {
+        fun goToDashboard(context: Context) {
             context.startActivity(Intent(context, MainActivity::class.java))
         }
     }

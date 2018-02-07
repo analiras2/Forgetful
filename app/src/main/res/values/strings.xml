@@ -5,5 +5,7 @@
     <string name="activity_login_pin">PIN Code</string>
     <string name="activity_login_enter">Entrar</string>
     <string name="activity_login_developed_by">Ascal Apps</string>
+    <string name="activity_login_obligatory_field">Campo obrigatório</string>
+    <string name="activity_login_invalid_pin_code">Pin inválido</string>
 
 </resources>
