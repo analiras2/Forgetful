@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#4a148c</color>
-    <color name="colorPrimaryDark">#12005e</color>
-    <color name="colorPrimaryLight">#7c43bd</color>
-    <color name="colorAccent">#4db6ac</color>
+
+    <!-- colors -->
+    
+    <color name="purple4a">#4a148c</color>
+    <color name="purple12">#12005e</color>
+    <color name="purple7c">#7c43bd</color>
+    <color name="blue">#4db6ac</color>
+    <color name="black">#000000</color>
+    <color name="gray75">#757575</color>
+    <color name="white">#ffffff</color>
+
+    <!-- attributes -->
+    
+    <color name="primary">@color/purple4a</color>
+    <color name="primary_dark">@color/purple12</color>
+    <color name="primary_light">@color/purple7c</color>
+    <color name="accent">@color/blue</color>
+    <color name="bg_primary">@color/white</color>
+    <color name="dark_text_primary">@color/black</color>
+    <color name="dark_text_secondary">@color/gray75</color>
+
+
 </resources>

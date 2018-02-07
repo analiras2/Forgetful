@@ -1,12 +1,10 @@
-package br.com.ascal.forgetful
+package br.com.ascal.forgetful.dash
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import br.com.ascal.forgetful.R
+import br.com.ascal.forgetful.base.BaseActivity
 
-/**
- * Created by analira on 07/02/18.
- */
-class MainActivity : AppCompatActivity(){
+class MainActivity : BaseActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
