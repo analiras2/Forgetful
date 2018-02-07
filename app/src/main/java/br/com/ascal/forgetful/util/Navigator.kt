@@ -2,7 +2,7 @@ package br.com.ascal.forgetful.util
 
 import android.content.Context
 import android.content.Intent
-import br.com.ascal.forgetful.dash.MainActivity
+import br.com.ascal.forgetful.dashboard.MainActivity
 import br.com.ascal.forgetful.login.LoginActivity
 
 class Navigator {

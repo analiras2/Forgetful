@@ -28,7 +28,7 @@
             android:theme="@style/AppTheme.NoActionbar" />
 
         <activity
-            android:name=".dash.MainActivity"
+            android:name=".dashboard.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
 

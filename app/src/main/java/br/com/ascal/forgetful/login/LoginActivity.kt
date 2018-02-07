@@ -29,6 +29,7 @@ class LoginActivity : BaseActivity(), LoginContract.View {
 
     override fun goToDashboard() {
         Navigator.goToDashboard(this)
+        finish()
     }
 
     override fun showEmptyError() {
