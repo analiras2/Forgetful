@@ -3,23 +3,27 @@
 
     <!-- colors -->
     
-    <color name="purple4a">#4a148c</color>
-    <color name="purple12">#12005e</color>
-    <color name="purple7c">#7c43bd</color>
-    <color name="blue">#4db6ac</color>
-    <color name="black">#000000</color>
+    <color name="purple67">#673AB7</color>
+    <color name="purple51">#512DA8</color>
+    <color name="purpleD1">#D1C4E9</color>
+    <color name="blue03">#03A9F4</color>
+    <color name="blue32">#328b82</color>
+    <color name="gray21">#212121</color>
     <color name="gray75">#757575</color>
     <color name="white">#ffffff</color>
+    <color name="whiteBD">#BDBDBD</color>
 
     <!-- attributes -->
     
-    <color name="primary">@color/purple4a</color>
-    <color name="primary_dark">@color/purple12</color>
-    <color name="primary_light">@color/purple7c</color>
-    <color name="accent">@color/blue</color>
+    <color name="primary">@color/purple67</color>
+    <color name="primary_dark">@color/purple51</color>
+    <color name="primary_light">@color/purpleD1</color>
+    <color name="accent">@color/blue03</color>
     <color name="bg_primary">@color/white</color>
-    <color name="dark_text_primary">@color/black</color>
+    <color name="dark_text_primary">@color/gray21</color>
     <color name="dark_text_secondary">@color/gray75</color>
+    <color name="pressed_tint">@color/blue32</color>
+    <color name="divider">@color/whiteBD</color>
 
 
 </resources>

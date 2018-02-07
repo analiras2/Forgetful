@@ -9,12 +9,28 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".dash.MainActivity">
+        <activity
+            android:name=".landing.SplashActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionbar.Splash">
             <intent-filter>
-                <category android:name="android.intent.category.LAUNCHER" />
                 <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".login.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionbar" />
+
+        <activity
+            android:name=".dash.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
 
     </application>
 

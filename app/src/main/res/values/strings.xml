@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Forgetful</string>
+
+    <!--Login-->
+    <string name="activity_login_pin">PIN Code</string>
+    <string name="activity_login_enter">Entrar</string>
+    <string name="activity_login_developed_by">Ascal Apps</string>
+
 </resources>
