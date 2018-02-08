@@ -3,6 +3,7 @@ package br.com.ascal.forgetful.login
 import android.os.Bundle
 import br.com.ascal.forgetful.R
 import br.com.ascal.forgetful.base.BaseActivity
+import br.com.ascal.forgetful.util.KeyboardController
 import br.com.ascal.forgetful.util.Navigator
 import kotlinx.android.synthetic.main.activity_login.*
 
@@ -20,6 +21,7 @@ class LoginActivity : BaseActivity(), LoginContract.View {
     override fun onStart() {
         super.onStart()
         presenter.attachView(this)
+        KeyboardController.show(this)
     }
 
     override fun onStop() {
