@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="activity_spacing_margin">16dp</dimen>
-    <dimen name="activity_large_spacing_margin">24dp</dimen>
+    <dimen name="activity_medium_spacing_margin">24dp</dimen>
+    <dimen name="activity_large_spacing_margin">48dp</dimen>
     <dimen name="text_normal">16sp</dimen>
     <dimen name="text_medium">20sp</dimen>
     <dimen name="text_large">24sp</dimen>

@@ -1,4 +1,4 @@
-package br.com.ascal.forgetful.base
+package br.com.ascal.forgetful.presentation.util
 
 import android.support.v7.app.AppCompatActivity
 

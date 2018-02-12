@@ -1,10 +1,10 @@
-package br.com.ascal.forgetful.login
+package br.com.ascal.forgetful.presentation.login
 
 import android.os.Bundle
 import br.com.ascal.forgetful.R
-import br.com.ascal.forgetful.base.BaseActivity
-import br.com.ascal.forgetful.util.KeyboardController
-import br.com.ascal.forgetful.util.Navigator
+import br.com.ascal.forgetful.presentation.util.BaseActivity
+import br.com.ascal.forgetful.presentation.util.KeyboardController
+import br.com.ascal.forgetful.presentation.util.Navigator
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : BaseActivity(), LoginContract.View {
@@ -35,14 +35,11 @@ class LoginActivity : BaseActivity(), LoginContract.View {
     }
 
     override fun showEmptyError() {
-        showError(resources.getString(R.string.activity_login_obligatory_field))
+        pinCodeEditText.error = resources.getString(R.string.activity_login_obligatory_field)
     }
 
     override fun showInvalidPinError() {
-        showError(resources.getString(R.string.activity_login_invalid_pin_code))
+        pinCodeEditText.error = resources.getString(R.string.activity_login_invalid_pin_code)
     }
 
-    private fun showError(msg: String) {
-        pinCodeEditText.error = msg
-    }
 }

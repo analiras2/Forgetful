@@ -1,4 +1,4 @@
-package br.com.ascal.forgetful.dashboard
+package br.com.ascal.forgetful.presentation.dashboard
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
@@ -6,9 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import br.com.ascal.forgetful.R
+import br.com.ascal.forgetful.data.entity.Item
 import kotlinx.android.synthetic.main.main_item.view.*
 
-class MainAdapter(private val context: Context, private val itemList: List<String>, private val listener: (String) -> Unit) : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
+class MainAdapter(private val context: Context, private val itemList: List<Item>, private val listener: (Item) -> Unit) : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
         holder?.bind(itemList[position], listener)
@@ -24,9 +25,9 @@ class MainAdapter(private val context: Context, private val itemList: List<Strin
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(item: String, listener: (String) -> Unit) = with(itemView) {
-            titleTextView.text = item
-            passwordTextView.text = "password"
+        fun bind(item: Item, listener: (Item) -> Unit) = with(itemView) {
+            titleTextView.text = item.title
+            passwordTextView.text = item.keyword
             setOnClickListener { listener(item) }
         }
     }

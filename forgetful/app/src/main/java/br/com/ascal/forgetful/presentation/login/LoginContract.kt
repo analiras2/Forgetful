@@ -1,4 +1,4 @@
-package br.com.ascal.forgetful.login
+package br.com.ascal.forgetful.presentation.login
 
 interface LoginContract {
 

@@ -1,4 +1,4 @@
-package br.com.ascal.forgetful.util
+package br.com.ascal.forgetful.presentation.util
 
 import android.app.Activity
 import android.view.WindowManager

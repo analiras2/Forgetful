@@ -1,4 +1,4 @@
-package br.com.ascal.forgetful.util
+package br.com.ascal.forgetful.presentation.util
 
 import android.content.Context
 import android.graphics.Canvas

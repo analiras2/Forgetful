@@ -1,6 +1,6 @@
-package br.com.ascal.forgetful.login
+package br.com.ascal.forgetful.presentation.login
 
-import br.com.ascal.forgetful.login.LoginContract.Companion.PIN_CODE_DEFAULT
+import br.com.ascal.forgetful.presentation.login.LoginContract.Companion.PIN_CODE_DEFAULT
 
 class LoginPresenter : LoginContract.Presenter {
 

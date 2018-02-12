@@ -1,8 +1,8 @@
-package br.com.ascal.forgetful.landing
+package br.com.ascal.forgetful.presentation.landing
 
 import android.os.Bundle
-import br.com.ascal.forgetful.base.BaseActivity
-import br.com.ascal.forgetful.util.Navigator
+import br.com.ascal.forgetful.presentation.util.BaseActivity
+import br.com.ascal.forgetful.presentation.util.Navigator
 
 class SplashActivity : BaseActivity() {
 

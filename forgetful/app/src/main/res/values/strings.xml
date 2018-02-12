@@ -18,6 +18,13 @@
     <!--Dashboard-->
     <string name="activity_main_options_dialog_title">O que deseja fazer?</string>
     <string name="activity_main_exclude_confirmation">Realmente deseja excluir %s?</string>
+    <string name="activity_main_empty_list">Nenhum item encontrado, para adicionar um novo item clique no \"+\"</string>
+
+    <!--New Item-->
+    <string name="activity_new_item_description">Insira os dados que deseja salvar:</string>
+    <string name="activity_new_item_keyword">Palavra-chave</string>
+    <string name="activity_new_item_title">Título</string>
+    <string name="action_new_item_save">Salvar</string>
 
     <!--Arrays-->
     <string-array name="options_dialog">
