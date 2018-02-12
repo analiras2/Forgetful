@@ -3,11 +3,14 @@ package br.com.ascal.forgetful.dashboard
 import android.app.AlertDialog
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Toast
 import br.com.ascal.forgetful.R
 import br.com.ascal.forgetful.base.BaseActivity
 import br.com.ascal.forgetful.util.SimpleDividerItemDecoration
 import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : BaseActivity(), MainContract.View {
 
@@ -36,6 +39,21 @@ class MainActivity : BaseActivity(), MainContract.View {
     override fun onStop() {
         super.onStop()
         presenter.detachView()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.dashboard, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+        R.id.action_add -> {
+            presenter.onAddClicked()
+            Toast.makeText(this, "Add novo item", Toast.LENGTH_SHORT).show()
+            true
+        }
+        else -> super.onOptionsItemSelected(item)
+
     }
 
     override fun showOptionsDialog() {

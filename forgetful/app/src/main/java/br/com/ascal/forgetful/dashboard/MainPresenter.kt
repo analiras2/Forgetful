@@ -29,4 +29,8 @@ class MainPresenter : MainContract.Presenter {
     override fun onExcludeConfirmationClicked() {
         //TODO
     }
+
+    override fun onAddClicked() {
+        // TODO
+    }
 }

@@ -5,6 +5,9 @@
     <string name="global_yes">Sim</string>
     <string name="global_no">Não</string>
 
+    <!--Actions-->
+    <string name="action_new_item">Novo item</string>
+
     <!--Login-->
     <string name="activity_login_pin">PIN Code</string>
     <string name="activity_login_enter">Entrar</string>

@@ -14,5 +14,6 @@ interface MainContract {
         fun onEditClicked()
         fun onExcludeClicked()
         fun onExcludeConfirmationClicked()
+        fun onAddClicked()
     }
 }
