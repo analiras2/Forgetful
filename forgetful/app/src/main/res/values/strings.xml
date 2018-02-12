@@ -1,11 +1,25 @@
 <resources>
     <string name="app_name">Forgetful</string>
 
+    <!--Global-->
+    <string name="global_yes">Sim</string>
+    <string name="global_no">Não</string>
+
     <!--Login-->
     <string name="activity_login_pin">PIN Code</string>
     <string name="activity_login_enter">Entrar</string>
     <string name="activity_login_developed_by">Ascal Apps</string>
     <string name="activity_login_obligatory_field">Campo obrigatório</string>
     <string name="activity_login_invalid_pin_code">Pin inválido</string>
+
+    <!--Dashboard-->
+    <string name="activity_main_options_dialog_title">O que deseja fazer?</string>
+    <string name="activity_main_exclude_confirmation">Realmente deseja excluir %s?</string>
+
+    <!--Arrays-->
+    <string-array name="options_dialog">
+        <item>Editar</item>
+        <item>Excluir</item>
+    </string-array>
 
 </resources>

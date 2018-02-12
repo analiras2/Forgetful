@@ -8,11 +8,10 @@ import android.view.ViewGroup
 import br.com.ascal.forgetful.R
 import kotlinx.android.synthetic.main.main_item.view.*
 
-class MainAdapter(private val context: Context, private val itemList: List<String>) : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
+class MainAdapter(private val context: Context, private val itemList: List<String>, private val listener: (String) -> Unit) : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
-        val item = itemList[position]
-        holder?.bindView(item)
+        holder?.bind(itemList[position], listener)
     }
 
     override fun getItemCount(): Int {
@@ -25,12 +24,10 @@ class MainAdapter(private val context: Context, private val itemList: List<Strin
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bindView(note: String) {
-            val title = itemView.titleTextView
-            val description = itemView.passwordTextView
-
-            title.text = note
-            description.text = "password"
+        fun bind(item: String, listener: (String) -> Unit) = with(itemView) {
+            titleTextView.text = item
+            passwordTextView.text = "password"
+            setOnClickListener { listener(item) }
         }
     }
 
