@@ -24,7 +24,6 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:hint="@string/activity_login_pin"
-            android:text="1402"
             android:inputType="numberPassword" />
 
     </android.support.design.widget.TextInputLayout>
