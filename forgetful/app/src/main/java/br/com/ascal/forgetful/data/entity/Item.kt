@@ -16,4 +16,10 @@ class Item {
 
     @ColumnInfo(name = "keyword")
     var keyword: String? = null
+
+    fun data(title: String, keyword: String): Item {
+        this.title = title
+        this.keyword = keyword
+        return this
+    }
 }

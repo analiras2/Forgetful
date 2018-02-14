@@ -25,6 +25,7 @@
     <string name="activity_new_item_keyword">Palavra-chave</string>
     <string name="activity_new_item_title">Título</string>
     <string name="action_new_item_save">Salvar</string>
+    <string name="activity_new_save_success">Salvo com sucesso</string>
 
     <!--Arrays-->
     <string-array name="options_dialog">

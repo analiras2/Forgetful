@@ -2,11 +2,11 @@ package br.com.ascal.forgetful.presentation.newitem
 
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.Toast
 import br.com.ascal.forgetful.ForgetfulApplication
 import br.com.ascal.forgetful.R
 import br.com.ascal.forgetful.data.entity.Item
 import br.com.ascal.forgetful.presentation.util.BaseActivity
+import br.com.ascal.forgetful.presentation.util.showToast
 import kotlinx.android.synthetic.main.activity_new_item.*
 
 class NewItemActivity : BaseActivity(), NewItemContract.View {
@@ -24,7 +24,7 @@ class NewItemActivity : BaseActivity(), NewItemContract.View {
 
     override fun onStart() {
         super.onStart()
-        presenter.attachView(this, (application as ForgetfulApplication).getDatabase(), intent.extras)
+        presenter.attachView(this, (application as ForgetfulApplication).getDatabase().itemDao(), intent.extras)
     }
 
     override fun onStop() {
@@ -37,7 +37,7 @@ class NewItemActivity : BaseActivity(), NewItemContract.View {
         return true
     }
 
-    override fun populateFields(item: Item) {
+    override fun updateFields(item: Item) {
         titleEditText.setText(item.title)
         keywordEditText.setText(item.keyword)
     }
@@ -56,7 +56,12 @@ class NewItemActivity : BaseActivity(), NewItemContract.View {
     }
 
     override fun showSaveSuccess() {
-        Toast.makeText(this, "Salvo", Toast.LENGTH_SHORT).show()
+        showToast(R.string.activity_new_save_success)
+        finish()
+    }
+
+    override fun onUnknownError(error: String) {
+        showToast(error)
     }
 
 }

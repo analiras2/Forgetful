@@ -8,10 +8,7 @@ import android.view.MenuItem
 import br.com.ascal.forgetful.ForgetfulApplication
 import br.com.ascal.forgetful.R
 import br.com.ascal.forgetful.data.entity.Item
-import br.com.ascal.forgetful.presentation.util.BaseActivity
-import br.com.ascal.forgetful.presentation.util.Navigator
-import br.com.ascal.forgetful.presentation.util.SimpleDividerItemDecoration
-import br.com.ascal.forgetful.presentation.util.visible
+import br.com.ascal.forgetful.presentation.util.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -30,7 +27,7 @@ class MainActivity : BaseActivity(), MainContract.View {
 
     override fun onStart() {
         super.onStart()
-        presenter.attachView(this, (application as ForgetfulApplication).getDatabase())
+        presenter.attachView(this, (application as ForgetfulApplication).getDatabase().itemDao())
     }
 
     override fun onStop() {
@@ -87,5 +84,9 @@ class MainActivity : BaseActivity(), MainContract.View {
 
     override fun goToEditItem(itemId: Long) {
         Navigator.goToNewItem(this, itemId)
+    }
+
+    override fun onUnknownError(error: String) {
+        showToast(error)
     }
 }

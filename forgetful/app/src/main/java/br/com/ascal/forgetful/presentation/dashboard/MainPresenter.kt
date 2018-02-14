@@ -1,33 +1,37 @@
 package br.com.ascal.forgetful.presentation.dashboard
 
-import br.com.ascal.forgetful.data.AppDatabase
+import br.com.ascal.forgetful.data.dao.ItemDao
 import br.com.ascal.forgetful.data.entity.Item
+import io.reactivex.Completable
 import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 
 class MainPresenter : MainContract.Presenter {
 
     private var view: MainContract.View? = null
     private lateinit var item: Item
-    private lateinit var database: AppDatabase
+    private lateinit var dao: ItemDao
+    private var disposables = CompositeDisposable()
 
-    override fun attachView(view: MainContract.View, database: AppDatabase) {
+    override fun attachView(view: MainContract.View, dao: ItemDao) {
         this.view = view
-        this.database = database
+        this.dao = dao
         getItems()
     }
 
     private fun getItems() {
-        database.itemDao().getAll()
+        val disposable = dao.getAll()
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe {
-                    if (!it.isEmpty()) view?.showItems(it)
-                }
+                .subscribe({ if (!it.isEmpty()) view?.showItems(it) }, { onThrowable(it) })
+
+        disposables.add(disposable)
     }
 
     override fun detachView() {
         view = null
+        disposables.clear()
     }
 
     override fun onItemClicked(item: Item) {
@@ -44,10 +48,19 @@ class MainPresenter : MainContract.Presenter {
     }
 
     override fun onExcludeConfirmationClicked() {
-        //TODO)
+        val disposable = Completable.fromCallable { dao.delete(item) }
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .doOnError { onThrowable(it) }
+                .subscribe()
+        disposables.add(disposable)
     }
 
     override fun onAddClicked() {
         view?.goToNewItem()
+    }
+
+    private fun onThrowable(e: Throwable?) {
+        view?.onUnknownError(e.toString())
     }
 }

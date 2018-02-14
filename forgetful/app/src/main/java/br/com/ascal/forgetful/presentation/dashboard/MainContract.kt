@@ -1,6 +1,6 @@
 package br.com.ascal.forgetful.presentation.dashboard
 
-import br.com.ascal.forgetful.data.AppDatabase
+import br.com.ascal.forgetful.data.dao.ItemDao
 import br.com.ascal.forgetful.data.entity.Item
 
 interface MainContract {
@@ -11,10 +11,11 @@ interface MainContract {
         fun showItems(items: List<Item>)
         fun goToNewItem()
         fun goToEditItem(itemId: Long)
+        fun onUnknownError(error: String)
     }
 
     interface Presenter {
-        fun attachView(view: View, database: AppDatabase)
+        fun attachView(view: View, dao: ItemDao)
         fun detachView()
         fun onItemClicked(item: Item)
         fun onEditClicked()
